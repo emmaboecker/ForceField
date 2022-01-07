@@ -5,7 +5,7 @@ plugins {
     id("io.papermc.paperweight.userdev") version "1.3.4-SNAPSHOT"
 }
 
-group = "org.example"
+group = "net.stckoverflw"
 version = "1.0.0"
 
 repositories {
@@ -17,14 +17,21 @@ dependencies {
     paperDevBundle("1.18.1-R0.1-SNAPSHOT")
 
     // KSpigot dependency
-    implementation("net.axay", "kspigot", "1.18.0")
+    implementation("net.axay:kspigot:1.18.0")
 }
 
 tasks {
+    build {
+        dependsOn(reobfJar)
+    }
     withType<KotlinCompile> {
         kotlinOptions {
             jvmTarget = "17"
         }
+    }
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+        options.release.set(17)
     }
 }
 

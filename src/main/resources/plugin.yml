@@ -1,8 +1,11 @@
-name: ExamplePlugin
+name: ForceFieldPlugin
 api-version: 1.18
 authors:
-  - You
-main: org.example.exampleplugin.ExamplePlugin
+  - StckOverflw
+  - l4zs
+main: net.stckoverflw.forcefield.ForceFieldPlugin
 version: 1.0.0
 libraries:
   - "net.axay:kspigot:1.18.0"
+  - "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
+  - "com.mojang:brigadier:1.0.18"

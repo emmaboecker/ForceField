@@ -1,13 +1,9 @@
-# KSpigot Gradle Kotlin Template
-This is a template for creating a [Paper Plugin](https://papermc.io) with [KSpigot](https://github.com/jakobkmar/kspigot), [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) and the [Kotlin](https://kotlinlang.org) programming language.
+# ForceField
+A Plugin to not get annoyed of other Players
 
-## How to use
-1. Click [**Use this template**](../../generate) at the top.
-2. Clone your version.
-3. Open the Project in IntelliJ.
-4. Change group and version in [**build.gradle.kts**](/build.gradle.kts#L8-L9).
-5. Change project name in [**settings.gradle.kts**](/settings.gradle.kts#L1).
-6. Edit your [**plugin.yml**](/src/main/resources/plugin.yml) to your needs.
+## Commands
+1. `/forcefield [Player]` to activate/deactivate a ForceField of a Player
+2. `/forcefield-radius [Radius]` to set the radius of a ForceField
 
 ## License
 This template is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
