@@ -1,18 +1,14 @@
 package net.stckoverflw.forcefield
 
 import com.mojang.brigadier.arguments.DoubleArgumentType
-import com.mojang.brigadier.arguments.FloatArgumentType
-import com.mojang.brigadier.arguments.LongArgumentType
 import net.axay.kspigot.chat.KColors
 import net.axay.kspigot.commands.argument
 import net.axay.kspigot.commands.command
 import net.axay.kspigot.commands.register
 import net.axay.kspigot.commands.requiresPermission
 import net.axay.kspigot.event.listen
-import net.axay.kspigot.extensions.broadcast
 import net.axay.kspigot.extensions.geometry.minus
 import net.axay.kspigot.main.KSpigot
-import net.kyori.adventure.text.Component
 import net.minecraft.commands.arguments.GameProfileArgument
 import net.minecraft.network.chat.TextComponent
 import net.stckoverflw.forcefield.config.ForceFieldConfig
