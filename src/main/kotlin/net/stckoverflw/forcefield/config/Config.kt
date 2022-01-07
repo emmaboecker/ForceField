@@ -1,7 +1,9 @@
 package net.stckoverflw.forcefield.config
 
 import net.axay.kspigot.main.KSpigotMainInstance
+import net.stckoverflw.forcefield.config
 import org.bukkit.configuration.file.YamlConfiguration
+import org.bukkit.entity.Player
 import java.io.File
 import java.io.IOException
 
@@ -37,3 +39,14 @@ abstract class AbstractConfig(name: String) {
 }
 
 class ForceFieldConfig : AbstractConfig("forcefield.yml")
+
+fun Player.setActive(active: Boolean) {
+    config.yaml.set("enabled." + this.uniqueId.toString(), active)
+    config.save()
+}
+
+fun Player.getActive() = config.yaml.getBoolean("enabled." + this.uniqueId.toString(), false)
+
+var radius: Double
+    get() = config.yaml.getDouble("radius", 5.0)
+    set(value) = config.yaml.set("radius", value)
